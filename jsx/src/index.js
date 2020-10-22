@@ -9,13 +9,20 @@ const App = () => {
     const buttonText = {text: "Click on Me!"}
     const labelName = "Enter Name:"
 
+    function getTime() {
+
+        return (new Date()).toLocaleTimeString()
+    }
+
     return (
         <div>
-            <label className="label" for="name">{labelName}</label>
+            <label className="label" htmlFor="name">{labelName}</label>
             <input id="name" type="text"/>
             <button style={{backgroundColor:'blue', color:'white'}}>
                 {buttonText.text}
             </button>
+            <h3>{getTime()}</h3>
+
         </div>
     )
 }
