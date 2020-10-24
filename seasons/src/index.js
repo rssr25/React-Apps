@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import SeasonDisplay from './SeasonDisplay'
 import Spinner from './Spinner'
+import './SeasonDisplay.css';
 
 
 class App extends React.Component{
@@ -15,8 +16,7 @@ class App extends React.Component{
         );
     }
 
-    render(){
-
+    renderContent = () => {
         if(this.state.errorMessage && !this.state.lat){
             return <div>Error: {this.state.errorMessage}</div>
         }
@@ -26,6 +26,17 @@ class App extends React.Component{
         }
 
         return <Spinner message="Please allow request for location..."/>
+
+    }
+
+    render(){
+
+        return (
+            <div style={{border:"10px solid red"}}>
+                {this.renderContent()}
+            </div>
+        )
+        
     }
 }
 

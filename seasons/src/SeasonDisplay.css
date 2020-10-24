@@ -26,6 +26,12 @@
     color:red;
 }
 
+.border-red{
+
+    border: 4px;
+    border-color: red;
+}
+
 .summer{
     background-color: orange;
 
